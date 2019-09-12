@@ -1,0 +1,14 @@
+Position Screen
+<table class="table">
+    <tr>
+        <td>User Id</td>
+        <th>Title</th>
+        <th>Delete</th>
+    </tr>
+    <!-- <tr *ngFor="let user of dataPosts">
+        <td>{{ user.userId }}</td>
+        <td>{{ user.title }}</td>
+    </tr> -->
+</table>
+<h1>I am Parent Component</h1>
+<app-position-data [tradeFromParent1]="positionDataObj" (addPostsData)="addPostsData($event)"></app-position-data>

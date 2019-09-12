@@ -1,0 +1,29 @@
+<h1>I am Child Component</h1>
+<table class="table">
+    <tr >
+        <th>Trade Id</th>
+        <th>Equity</th>
+        <th>Trade Date</th>
+    </tr>
+    <tr>
+        <!-- <td>{{ tradeFromParent.tradeId }}</td>
+        <td>{{ tradeFromParent.equityName }}</td>
+        <td>{{ tradeFromParent.tradeDate}}</td> -->
+    </tr>
+</table>
+
+<table class="table">
+    <tr>
+        <td>User Id</td>
+        <th>Title</th>
+        <th>Delete</th>
+    </tr>
+    <tr *ngFor= "let user of dataPosts">
+        <td>{{ user.userId }}</td>
+        <td>{{ user.title }}</td> 
+        <td>
+            <button class="btn btn-primary" (click)="onAddClick(user)">Add</button>
+            <button class="btn btn-danger" style="margin-left: 10px" (click)="onDeleteClick(user)">Delete</button>
+        </td>
+    </tr>
+</table>

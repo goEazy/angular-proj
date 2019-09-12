@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="my-0 mr-md-auto" id="navbarNav">
+        <ul class="navbar-nav">
+            <li *ngFor="let menuItem of menuItems" class="nav-item" [ngStyle] = "{'padding-left': getPixel(), 'padding-right': getPixel()}">
+                <a clas="nav-link" routerLink="{{menuItem.url}}">{{ menuItem.name | titlecase}}</a>
+            </li>
+            <a [routerLink]="['/reports','2','active']">Reports</a>
+        </ul>
+    </div>
+    <form  class="form-inline">
+        <div  class="p2  mr-sm-2">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" lowercase>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </div>
+        <div class="p2">
+                <a clas="nav-link" routerLink="/signup">Signup</a>
+        </div>
+       
+    </form> 
+    <!-- <div class="" id="navbarNav" style="position: absolute; right:5px">
+       
+    </div>
+     -->
+     {{ sign }}
+</nav>
